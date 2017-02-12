@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
 using Android.App;
 using Android.Content;
 using Android.OS;
@@ -23,7 +22,6 @@ namespace SaveHalbe.Adapters
             this.context = context;
             this.items = items;
         }
-
 
         public override int Count
         {

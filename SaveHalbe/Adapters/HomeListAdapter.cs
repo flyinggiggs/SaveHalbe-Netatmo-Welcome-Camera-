@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
 using Android.App;
 using Android.Content;
 using Android.OS;
@@ -13,7 +12,7 @@ using SaveHalbe.Core.Model;
 
 namespace SaveHalbe.Adapters
 {
-    public class HomeListAdapter: BaseAdapter<Home>
+    public class HomeListAdapter : BaseAdapter<Home>
     {
         private List<Home> items;
         private Activity context;
@@ -23,7 +22,6 @@ namespace SaveHalbe.Adapters
             this.context = context;
             this.items = items;
         }
-
 
         public override int Count
         {
@@ -56,7 +54,7 @@ namespace SaveHalbe.Adapters
             }
 
             // set view properties to reflect data for the given row
-            convertView.FindViewById<TextView>(Android.Resource.Id.Text1).Text = item.Name;
+            convertView.FindViewById<TextView>(Android.Resource.Id.Text1).Text = string.Format("{0}, {1}, {2}", item.Place.City, item.Place.Country, item.Name);
 
             return convertView;
         }

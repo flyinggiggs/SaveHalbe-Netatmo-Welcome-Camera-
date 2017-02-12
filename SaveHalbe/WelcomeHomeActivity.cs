@@ -39,10 +39,7 @@ namespace SaveHalbe
 
             homesView.Adapter = homeListAdapter;
         }
-        //catch(Exception e)
-        //{
-        //handle
-        // }
+
     }
 
 }

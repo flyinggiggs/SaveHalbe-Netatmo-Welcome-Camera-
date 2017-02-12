@@ -8,8 +8,6 @@ namespace SaveHalbe.Core.Helper
 {
     public class LoginHelper
     {
-
-
         public static string ValidateLogin(string userId, string password)
         {
             string accessToken = string.Empty;
@@ -18,7 +16,5 @@ namespace SaveHalbe.Core.Helper
 
             return accessToken; 
         }
-
-
     }
 }

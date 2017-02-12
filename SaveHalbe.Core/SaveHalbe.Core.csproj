@@ -40,8 +40,15 @@
     <Compile Include="Helper\LoginHelper.cs" />
     <Compile Include="Helper\TokenHelper.cs" />
     <Compile Include="Model\Body.cs" />
+    <Compile Include="Model\Camera.cs" />
+    <Compile Include="Model\DateSetup.cs" />
+    <Compile Include="Model\Event.cs" />
+    <Compile Include="Model\Face.cs" />
     <Compile Include="Model\Home.cs" />
+    <Compile Include="Model\Person.cs" />
+    <Compile Include="Model\Place.cs" />
     <Compile Include="Model\RetrievedData.cs" />
+    <Compile Include="Model\SnapShot.cs" />
     <Compile Include="Model\TokenData.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

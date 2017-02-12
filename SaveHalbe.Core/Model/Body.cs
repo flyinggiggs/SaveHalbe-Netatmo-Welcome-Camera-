@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 
 namespace SaveHalbe.Core.Model
 {
-    //[JsonObject(MemberSerialization.OptIn)]
     public class Body
     {
         public Body() { }

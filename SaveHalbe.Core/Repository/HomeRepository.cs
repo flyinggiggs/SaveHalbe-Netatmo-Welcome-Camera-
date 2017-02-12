@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 
 namespace SaveHalbeCore.Repository
 {
-
     public class HomeRepository
     {
         [JsonProperty("home")]
@@ -33,6 +32,7 @@ namespace SaveHalbeCore.Repository
         {
             return this.Home.ToList();
         }
+
         public User GetUser()
         {
             return this.User;
