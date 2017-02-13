@@ -21,6 +21,7 @@ namespace SaveHalbe
     public class WelcomeHomeActivity : Activity
     {
         private ListView homesView;
+        private List<Home> homes;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -35,11 +36,27 @@ namespace SaveHalbe
 
             var homeRepository = homeDateService.GetHomeRepository();
 
-            HomeListAdapter homeListAdapter = new HomeListAdapter(this, homeRepository.GetHome());
+            this.homes = homeRepository.GetHome();
+
+            HomeListAdapter homeListAdapter = new HomeListAdapter(this, this.homes);
 
             homesView.Adapter = homeListAdapter;
+
+            homesView.ItemClick += HomeListView_ItemClick;
         }
 
+
+        private void HomeListView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
+        {
+            var home = homes[e.Position];
+
+            var intent = new Intent(this, typeof(HomeDetailActivity));
+
+            string serializedData = JsonConvert.SerializeObject(home);
+            intent.PutExtra("homeDetail", serializedData);
+
+            StartActivityForResult(intent, 100);
+        }
     }
 
 }

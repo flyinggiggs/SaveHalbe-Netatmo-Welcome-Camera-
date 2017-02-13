@@ -60,6 +60,7 @@
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="HomeDetailActivity.cs" />
     <Compile Include="WelcomeHomeActivity.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -71,6 +72,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\WelcomeHome.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\HomeDetail.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
