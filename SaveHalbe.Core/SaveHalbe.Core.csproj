@@ -42,6 +42,7 @@
     <Compile Include="Model\Body.cs" />
     <Compile Include="Model\Camera.cs" />
     <Compile Include="Model\DateSetup.cs" />
+    <Compile Include="Model\DetectedFace.cs" />
     <Compile Include="Model\Event.cs" />
     <Compile Include="Model\Face.cs" />
     <Compile Include="Model\Home.cs" />

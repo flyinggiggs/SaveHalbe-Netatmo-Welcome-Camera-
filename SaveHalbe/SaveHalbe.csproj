@@ -51,16 +51,21 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Adapters\HomeListAdapter.cs" />
     <Compile Include="Adapters\PersonListAdapter.cs" />
+    <Compile Include="AnalyzedPictureActivity.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="HomeDetailActivity.cs" />
+    <Compile Include="Utility\FaceDetectHelper.cs" />
+    <Compile Include="Utility\ImageHelper.cs" />
     <Compile Include="WelcomeHomeActivity.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -75,6 +80,12 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\HomeDetail.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\PersonRowView.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\AnalyzedPicture.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

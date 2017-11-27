@@ -9,6 +9,8 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using SaveHalbe.Core.Model;
+using SaveHalbe.Utility;
+
 
 namespace SaveHalbe.Adapters
 {
@@ -50,11 +52,14 @@ namespace SaveHalbe.Adapters
 
             if (convertView == null)
             {
-                convertView = context.LayoutInflater.Inflate(Android.Resource.Layout.SimpleDropDownItem1Line, null);
+                convertView = context.LayoutInflater.Inflate(Resource.Layout.PersonRowView, null);
             }
 
             // set view properties to reflect data for the given row
-            convertView.FindViewById<TextView>(Android.Resource.Id.Text1).Text = item.Pseudo;
+            var imageBitmap = ImageHelper.GetPicture(item.Face.Id, item.Face.Key);
+
+            convertView.FindViewById<TextView>(Resource.Id.personNameTextView).Text = string.IsNullOrWhiteSpace(item.Pseudo) ? "Unknown" : item.Pseudo;
+            convertView.FindViewById<ImageView>(Resource.Id.personImageView).SetImageBitmap(imageBitmap);
 
             return convertView;
         }

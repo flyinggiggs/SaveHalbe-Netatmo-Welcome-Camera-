@@ -24,7 +24,7 @@ namespace SaveHalbe.Core.Helper
                     {
                         {"client_id", Constants.Credential.client_id},
                         {"client_secret", Constants.Credential.client_secret},
-                        {"grant_type", Constants.Credential.grant_type },
+                        {"grant_type", Constants.Credential.grant_type},
                         {"username", userId},
                         {"password", password},
                         {"scope", Constants.Credential.scope}
